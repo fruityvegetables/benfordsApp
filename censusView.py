@@ -5,6 +5,7 @@ import pandas as pd
 app = Flask(__name__)
 
 df = pd.read_table("census_2009b")
+
 @app.route('/', methods=("POST", "GET"))   
 def html_table():
     return render_template('index.html', tables=[df.to_html(classes='data')], titles=df.columns.values)
