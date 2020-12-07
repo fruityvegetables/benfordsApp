@@ -8,7 +8,7 @@ from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
 import numpy as np
 
-#variables for census data
+#variable for census data
 census_2009 = pd.read_table('census_2009b')
 census_2009.shape
 census_2009['7_2009'].head()
@@ -47,3 +47,5 @@ _=plt.xlabel('leading digit')
 _=plt.ylabel('count')
 
 plt.show()
+# occurences of each digit:
+# 5735, 3544, 2341, 1847, 1559, 1370, 1166, 1042, 903

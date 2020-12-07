@@ -13,27 +13,24 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
 
-    #variables for census data
-    census_2009 = pd.read_table('census_2009b')
-    census_2009.shape
-    census_2009['7_2009'].head()
+    # #variables for census data
+    # census_2009 = pd.read_table('census_2009b')
 
-    ## function for retrieving first digit
-    first_digit_list=[]
-    for this_amt in list(census_2009['7_2009']):
-        first_digit_list.append(str(this_amt)[0])
+    # ## function for retrieving first digit
+    # first_digit_list=[]
+    # for this_amt in list(census_2009['7_2009']):
+    #     first_digit_list.append(str(this_amt)[0])
 
-    len(first_digit_list)
+    # first_digit_list.sort()
+    # _=plt.hist(first_digit_list, bins=len(set(first_digit_list)))
+    # _=plt.xlabel('leading digit')
+    # _=plt.ylabel('count')
 
-    first_digit_list.sort()
-    _=plt.hist(first_digit_list, bins=len(set(first_digit_list)))
-    _=plt.xlabel('leading digit')
-    _=plt.ylabel('count')
-
-    plt.show()
+    #plt.show()
     # Generate the figure
     fig = Figure()
     ax = fig.subplots()
+    #ax.set_xticklabels([1, 2, 3, 4, 5, 6, 7, 8, 9,])
     ax.plot([500, 6000])
     # Save it to a temporary buffer.
     buf = BytesIO()
