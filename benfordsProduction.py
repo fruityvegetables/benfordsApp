@@ -1,3 +1,4 @@
+#I have a bad habit of importing all things I may or may not need :P
 from flask import Flask, request, render_template, session, redirect, make_response, send_file
 import pandas as pd 
 #print('Pandas version', pd.__version__)

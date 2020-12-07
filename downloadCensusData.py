@@ -6,7 +6,7 @@ target_path = "census_2009b"
 
 response = requests.get(download_url)
 response.raise_for_status()    
-# Check that the request was successful
+# checks that the request was successful, prints to CLI
 with open(target_path, "wb") as f:
     f.write(response.content)
 print("Download ready.")
