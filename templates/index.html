@@ -5,10 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-
-{% for table in tables %}
+<!-- control flow for benfordsProduction -->
+    <img src="{{ url_for('fig', censusdata = title) }}" alt="Image placeholder" height="100">
+<!-- control flow for the censusView -->
+    {% for table in tables %}
             {{titles[loop.index]}}
             {{ table|safe }}
-{% endfor %}
+    {% endfor %}
 </body>
 </html>

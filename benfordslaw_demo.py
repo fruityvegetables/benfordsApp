@@ -2,13 +2,8 @@ import random
 
 import benfordslaw
 
-
+# the main function to call other functions
 def main():
-
-    print("-----------------")
-    print("| codedrome.com |")
-    print("| Benford's Law |")
-    print("-----------------\n")
 
     data = get_random_data()
     #data = get_benford_data()
@@ -20,7 +15,7 @@ def main():
     print()
     print_as_graph(benford_table)
 
-
+# function to generate random data
 def get_random_data():
 
     """
@@ -35,7 +30,7 @@ def get_random_data():
 
     return random_data
 
-
+# function to generate "benfordized" data
 def get_benford_data():
 
     """
@@ -53,7 +48,7 @@ def get_benford_data():
 
     return benford_data
 
-
+# function to print the data in a CLI table
 def print_as_table(benford_table):
 
     width = 59
@@ -75,7 +70,7 @@ def print_as_table(benford_table):
 
     print("-" * width)
 
-
+# function to print the data as a CLI graph
 def print_as_graph(benford_table):
 
     REDBG = "\x1B[41m"

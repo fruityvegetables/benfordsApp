@@ -1,7 +1,10 @@
+from flask import Flask, request, render_template, session, redirect, make_response, send_file
 import pandas as pd 
 #print('Pandas version', pd.__version__)
 import matplotlib
 import matplotlib.pylab as plt
+from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+from matplotlib.figure import Figure
 import numpy as np
 
 #variables for census data

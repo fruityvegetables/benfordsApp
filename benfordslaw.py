@@ -1,7 +1,9 @@
 import collections
 
+# percentages of the occurence of leading digits, 1-9. 0 is used first, so the index matches the equivalent digit we are looking for.
 BENFORD_PERCENTAGES = [0, 0.301, 0.176, 0.125, 0.097, 0.079, 0.067, 0.058, 0.051, 0.046]
 
+# calculates the data, and places it in a dictionary.
 def calculate(data):
     results = []
     first_digits= list(map(lambda n: str(n)[0], data))
